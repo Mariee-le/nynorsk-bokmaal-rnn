@@ -31,7 +31,7 @@ def text_tensor(text):
 
 model = CharRNN(n_chars, 32, len(languages))
 
-criterion = torch.nnNLLLoss()
+criterion = torch.nn.NLLLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.005)
 
 
