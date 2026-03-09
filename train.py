@@ -39,7 +39,7 @@ for step in range(3000):
     
     i = random.randrange(len(texts))
 
-    text = text[i]
+    text_sample = texts[i]
     lang = labels[i]
 
     x = text_tensor(text)
