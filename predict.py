@@ -13,7 +13,7 @@ def build_vocab(text):
 
 
 while True:
-    text = input("tekst:" ")
+    text = input("tekst: ")
 
     if len(text) < 20:
         print("Du må skrive minst 20 bokstavar i setninga :)")
