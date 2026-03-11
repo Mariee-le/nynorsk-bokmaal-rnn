@@ -1,12 +1,13 @@
 import torch
 from model import CharRNN
+import re
 
 
 languages = ["nno", "nob"]
 
 model = torch.load("model.pt", weights_only=False)
 
-all_chars = sorted(set("".join([t for t,_ in zip(range(8000), range(8000))])))
+all_chars = sorted(set(re.findall(r".", "".join(texts))))
 
 model.eval()
 
