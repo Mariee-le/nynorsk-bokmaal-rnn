@@ -57,4 +57,8 @@ for step in range(3000):
         print(step, loss.item(), lang, text_sample[:50])
 
 
-torch.save(model, "model.pt")
+torch.save({
+    "model": model,
+    "all_chars": all_chars,
+    "languages": languages
+}, "model.pt")
