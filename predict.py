@@ -6,6 +6,7 @@ languages = ["nno", "nob"]
 
 model = torch.load("model.pt", weights_only=False)
 
+all_chars = sorted(set("".join([t for t,_ in zip(range(8000), range(8000))])))
 
 def build_vocab(text):
     return sorted(set(text))
