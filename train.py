@@ -54,7 +54,7 @@ for step in range(3000):
     optimizer.step()
 
     if step % 200 == 0:
-        print(step, loss.item(), lang, texts[:50])
+        print(step, loss.item(), lang, text_sample[:50])
 
 
 torch.save(model, "model.pt")
