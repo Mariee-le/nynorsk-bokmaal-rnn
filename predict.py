@@ -23,7 +23,7 @@ while True:
     n_chars = len(chars)
 
 
-    tensor = torch.zeros(len(text), 1, c_chars)
+    tensor = torch.zeros(len(text), 1, n_chars)
 
     for i, c in enumerate(text):
         tensor[i][0][chars.index(c)] = 1
