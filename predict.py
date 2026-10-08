@@ -1,13 +1,12 @@
 import torch
 from model import CharRNN
-import re
 
 
-languages = ["nno", "nob"]
+checkpoint = torch.load("model.pt", weights_only=False)
 
-model = torch.load("model.pt", weights_only=False)
-
-all_chars = sorted(set(re.findall(r".", "".join(texts))))
+model = checkpoint["model"]
+all_chars = checkpoint["all_chars"]
+languages = checkpoint["languages"]
 
 model.eval()
 
